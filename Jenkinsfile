@@ -1,6 +1,7 @@
 pipeline {
-    agent {
-        docker { image 'maven:3.8.6-jdk-11' }
+    agent any
+    tools {
+        maven 'Maven 3.8.6' // The name you configured in Global Tool Configuration
     }
     stages {
         stage('Build') {
@@ -10,5 +11,3 @@ pipeline {
         }
     }
 }
-
-
